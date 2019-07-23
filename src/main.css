@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background-image: url('/assets/vintage-seamless.jpg');
+    background-attachment: fixed;
+}
+
+.hidden {
+    display: none;
+}

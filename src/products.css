@@ -1,0 +1,22 @@
+#bikes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#bikes li {
+    list-style: none;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#bikes li img {
+    width: 190px;
+    margin-top: 10px;
+}
