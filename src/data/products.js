@@ -2,7 +2,7 @@ const roadBike = {
     code: 'road1',
     name: 'Blue Road Bike',
     description: 'Fancy blue road bike of your dreams.',
-    image: 'assets/classic-racing-bike.jpg',
+    image: 'assets/classic-race-bike.jpg',
     category: 'road-bike',
     price: 300,
     cost: 78
