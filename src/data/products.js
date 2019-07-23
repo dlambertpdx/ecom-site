@@ -58,13 +58,57 @@ const raceBike = {
     cost: 400
 };
 
+const uniBike = {
+    code: 'uni1',
+    name: 'Unicylce',
+    description: 'Don\'t forget your bagpipes!',
+    image: 'assets/unicycle.jpeg',
+    category: 'unicycle',
+    price: 300,
+    cost: 60
+};
+
+const pennyFarthing = {
+    code: 'penny1',
+    name: 'Penny Farthing',
+    description: 'Mind the potholes!',
+    image: 'assets/penny-farthing.jpg',
+    category: 'penny-farthing',
+    price: 1300,
+    cost: 250
+};
+
+const fixie = {
+    code: 'fixie1',
+    name: 'Fixie',
+    description: 'Who needs brakes?!',
+    image: 'assets/fixie.jpg',
+    category: 'fixie',
+    price: 300,
+    cost: 50
+};
+
+const cityBike2 = {
+    code: 'city2',
+    name: 'City Bike - Amsterdam',
+    description: 'Ride along the canals',
+    image: 'assets/city-bike2.jpg',
+    category: 'city-bike',
+    price: 300,
+    cost: 50
+};
+
 const bikes = [
     roadBike,
     mountainBike,
     cityBike,
     cruiserBike,
     kidBike,
-    raceBike
+    raceBike, 
+    uniBike,
+    pennyFarthing,
+    fixie,
+    cityBike2
 ];
 
 export default bikes;
