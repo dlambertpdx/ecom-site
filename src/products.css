@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Lobster&display=swap');
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Lobster';
+    font-weight: 100;
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+#bikes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    padding: 0;
+    max-width: 100%;
+}
+
+#bikes li {
+    list-style: none;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    height: 250px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#bikes li img {
+    width: 190px;
+    margin-top: 5px;
+}
+
+.price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    
+}
