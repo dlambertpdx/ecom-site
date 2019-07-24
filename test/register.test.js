@@ -1,6 +1,6 @@
 import bikes from '../src/data/products.js';
-//import order from '../src/data/order.js';
-import { findProduct, calcLineTotal } from '../src/register.js';
+import cart from '../src/data/order.js';
+import { findProduct, calcLineTotal, calcOrderTotal } from '../src/register.js';
 const test = QUnit.test;
 
 QUnit.module('Register');
@@ -36,15 +36,15 @@ test('calculate line total', (assert) => {
 
     // assert
     assert.equal(total, expected);
+});     
+
+test('calculate order total', (assert) => {
+    // arrange
+    const expected = 3100;
+
+    // act
+    const orderTotal = calcOrderTotal(cart, bikes);
+
+    // assert
+    assert.equal(orderTotal, expected);
 });
-
-// test('calculate order total', (assert) => {
-//     // arrange
-//     const expected = 22.30;
-
-//     // act
-//     const orderTotal = calcOrderTotal(order, fruits);
-
-//     // assert
-//     assert.equal(orderTotal, expected);
-// });

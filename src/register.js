@@ -11,3 +11,17 @@ export function findProduct(bikes, code) {
 export function calcLineTotal(quantity, price) {
     return Number((quantity * price).toFixed(2));
 }
+
+export function calcOrderTotal(cart, bikes) {
+    // declare order total variable
+    let orderTotal = 0;
+    // loop the array of cart (line items)
+    for(let i = 0; i < cart.length; i++) {
+        const cartQty = cart[i];
+        const item = findProduct(bikes, cartQty.code);
+        const lineTotal = calcLineTotal(cartQty.quantity, item.price);
+        orderTotal += lineTotal;
+    }
+    // return order total
+    return orderTotal;
+}

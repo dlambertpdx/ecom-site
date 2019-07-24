@@ -1,7 +1,8 @@
 import cart from './data/order.js';
 import bikes from './data/products.js';
-import { findProduct } from './register.js';
+import { findProduct, calcOrderTotal } from './register.js';
 import renderLineItem from './render-line-item.js';
+import { toUSD } from './format.js';
 
 const tbody = document.querySelector('tbody');
 
@@ -12,3 +13,8 @@ for(let i = 0; i < cart.length; i++) {
 
     tbody.appendChild(dom);
 }
+
+const orderTotal = document.createElement('th');
+orderTotal.textContent = toUSD(calcOrderTotal(cart, bikes));
+const tfoot = document.querySelector('tfoot>tr');
+tfoot.appendChild(orderTotal);
