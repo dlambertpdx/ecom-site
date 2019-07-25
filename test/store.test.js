@@ -33,9 +33,54 @@ test('get product and return bootstrapped data', assert => {
 });
 
 test('get shopping cart returns empty array when non-existent', (assert) => {
-    // act
+    // arrange
     const shoppingCart = store.getShoppingCart();
 
     // assert
     assert.deepEqual(shoppingCart, []);
+});
+
+test('order product adds item to shopping cart', (assert) => {
+    // arrange
+    const code = 'road1';
+    const expected = [{
+        code: 'road1',
+        quantity: 1
+    }];
+
+    // act
+    store.orderProduct(code);
+    const shoppingCart = store.getShoppingCart();
+
+    // assert
+    assert.deepEqual(shoppingCart, expected);
+});
+
+test('order product already in shopping cart', (assert) => {
+    // arrange
+    const code = 'road1';
+    const expected = [{
+        code: 'road1', 
+        quantity: 2
+    }];
+
+    // act
+    store.orderProduct(code);
+    store.orderProduct(code);
+    const shoppingCart = store.getShoppingCart();
+
+    // assert
+    assert.deepEqual(shoppingCart, expected);
+});
+
+test('get product by code', (assert) => {
+    // arrange
+    const code = 'road1';
+    const expect = bikes[0];
+
+    // act
+    const bike = store.getProduct(code);
+
+    // assert
+    assert.deepEqual(bike, expect);
 });

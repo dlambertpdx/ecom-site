@@ -1,3 +1,5 @@
+import { toUSD } from './format.js';
+import store from '../src/data/store.js';
 
 function renderBike(bike) {
     const li = document.createElement('li');
@@ -23,6 +25,9 @@ function renderBike(bike) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = bike.code;
+    button.addEventListener('click', () => {
+        store.orderProduct(bike.code);
+    })
     p.appendChild(button);
 
     li.appendChild(p);

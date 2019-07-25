@@ -1,5 +1,5 @@
-import bikes from './products.js';
-// import { findProduct } from '../register.js';
+import bikes from './products.js'; 
+import { findProduct } from '../register.js';
 
 const PRODUCT_KEY = 'products';
 const SHOPPING_CART_KEY = 'shopping-cart';
@@ -30,8 +30,29 @@ const store = {
         }
         return shoppingCart;
     },
+    getProduct(code) {
+        const products = store.getProducts();
+        const product = findProduct(products, code);
+        return product;
+    },
+    orderProduct(code) {
 
+        const shoppingCart = store.getShoppingCart();
 
+        const lineItem = findProduct(shoppingCart, code);
+
+        if(lineItem) {
+            lineItem.quantity++;
+        }
+        else {
+            const lineItem = {
+                code: code,
+                quantity: 1
+            };
+            shoppingCart.push(lineItem);
+        }
+        store.save(SHOPPING_CART_KEY, shoppingCart);
+    }
 };
 
 
