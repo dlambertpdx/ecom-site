@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Lobster&display=swap');
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Lobster';
+    font-weight: 100;
+    text-align: center;
+}
+
+div {
+    background-color: rgba(62, 230, 174, 0.7);
+    max-width: 500px;
+    margin: auto;
+    height: 80px;
+    border-radius: 6px;
+    vertical-align: middle;
+    
+}
+
+table, .order-now {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+}
+
+.order-now{
+    text-align: right;
+}
+
+.order-now button {
+    width: 200px;
+    background: firebrick;
+    color: bisque;
+    font-size: 1.5em;
+    height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+thead {
+    background: #000;
+    color: #fff;
+}
+
+tbody {
+    background: #fff;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #ccc;
+}
+
+table th, table td {
+    padding: 10px;
+}
+
+tfoot {
+    text-align: right;
+    background: slategray;
+    color: whitesmoke;
+    font-weight: bold;
+}
