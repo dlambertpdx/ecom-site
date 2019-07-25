@@ -2,7 +2,7 @@ import bikes from './products.js';
 // import { findProduct } from '../register.js';
 
 const PRODUCT_KEY = 'products';
-// const SHOPPING_CART_KEY = 'shopping-cart';
+const SHOPPING_CART_KEY = 'shopping-cart';
 
 const store = {
     storage: window.localStorage,
@@ -22,21 +22,14 @@ const store = {
             products = bikes;
         }
         return products;
-    }
-    // getProducts() {
-    //     let products = store.get(PRODCUT_KEY);
-
-    //     if(!products){
-    //         store.save(PRODCUT_KEY, bikes);
-    //         products = bikes;
-    //     }
-    //     return products;
-    // },
-
-
-
-
-
+    }, 
+    getShoppingCart() {
+        let shoppingCart = store.get(SHOPPING_CART_KEY);
+        if(!shoppingCart) {
+            shoppingCart = [];
+        }
+        return shoppingCart;
+    },
 
 
 };

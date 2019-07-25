@@ -24,24 +24,18 @@ test('generic get and save', assert => {
     assert.deepEqual(got, cat);
 });
 
-test('get product and return bootstrapped data', assert => {
 
+test('get product and return bootstrapped data', assert => {
+    
     const products = store.getProducts();
-  
+    
     assert.deepEqual(products, bikes);
 });
 
+test('get shopping cart returns empty array when non-existent', (assert) => {
+    // act
+    const shoppingCart = store.getShoppingCart();
 
-
-// test('get shopping cart test', assert => {
-//     // arrange
-//     const cart = [];
-//     const expect = {
-
-//     }
-
-//     // act
-
-//     // assert
-//     assert.equal(a, b)
-// })
+    // assert
+    assert.deepEqual(shoppingCart, []);
+});
