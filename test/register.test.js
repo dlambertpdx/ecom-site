@@ -12,7 +12,7 @@ test('Find product by code', assert => {
         code: 'road1',
         name: 'Blue Road Bike',
         description: 'Fancy blue road bike of your dreams.',
-        image: 'assets/classic-race-bike.jpg',
+        image: '/assets/classic-race-bike.jpg',
         category: 'road-bike',
         price: 300,
         cost: 78
