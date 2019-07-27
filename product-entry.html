@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enter New Product</title>
+    <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="/src/product-entry.css">
+</head>
+
+<body>
+    <main>
+        <h2>Add a Bike: </h2>
+        <form id="new-product-form">
+            <p>
+                <!-- Item Code -->
+                <label for="code">Item Code: </label>
+                <input id="code" type="text" name="code" required>
+            </p>
+            <p>
+                <!-- Item Name -->
+                <label for="name">Item Name: </label>
+                <input id="name" type="text" name="name" required>
+            </p>
+            <p>
+                <!-- Item Description -->
+                <label for="description">Item Description: </label>
+                <textarea name="description" id="description"></textarea>
+            </p>
+            <p>
+                <!-- Item Category -->
+                <label for="category">Item Category: </label>
+                <input id="category" type="text" name="category" required>
+            </p>
+            <p>
+                <!-- Item Price -->
+                <label for="price">Item Price: </label>
+                <input id="price" type="number" name="price" step=".01" required>
+            </p>
+            <p>
+                <!-- Item Image -->
+                <label for="image">Item Image: </label>
+                <input id="image" type="file" name="image" required>
+            </p>
+            <p>
+                <!-- Submit New Item Button -->
+                <button>Add Bike</button>
+            </p>
+
+        </form>
+    </main>
+<script src="" type="module"></script>
+</body>
+
+</html>
