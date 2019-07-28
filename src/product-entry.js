@@ -7,7 +7,7 @@ form.addEventListener('submit', event => {
 
     const formData = new FormData(form);
 
-    const image = FormData.get('image');
+    const image = formData.get('image');
 
     getBase64(image, base64Url => {
         const product = {
