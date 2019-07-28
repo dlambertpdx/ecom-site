@@ -35,6 +35,11 @@ const store = {
         const product = findProduct(products, code);
         return product;
     },
+    addProduct(product) {
+        const products = store.getProducts();
+        products.push(product);
+        store.save(PRODUCT_KEY, products);
+    },
     orderProduct(code) {
 
         const shoppingCart = store.getShoppingCart();

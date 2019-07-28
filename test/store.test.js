@@ -26,9 +26,9 @@ test('generic get and save', assert => {
 
 
 test('get product and return bootstrapped data', assert => {
-    
+
     const products = store.getProducts();
-    
+
     assert.deepEqual(products, bikes);
 });
 
@@ -60,7 +60,7 @@ test('order product already in shopping cart', (assert) => {
     // arrange
     const code = 'road1';
     const expected = [{
-        code: 'road1', 
+        code: 'road1',
         quantity: 2
     }];
 
@@ -83,4 +83,24 @@ test('get product by code', (assert) => {
 
     // assert
     assert.deepEqual(bike, expect);
+});
+
+test('add a product', (assert) => {
+    // arrange 
+    const product = {
+        category: 'scooter',
+        code: 'scooter1',
+        description: 'Frozen Scooter',
+        image: '/assets/frozen.jpg',
+        name: 'Frozen Scooter',
+        price: 33,
+        cost: 22
+    };
+
+    // act
+    store.addProduct(product);
+    const bikes = store.getProducts();
+
+    // assert
+    assert.deepEqual(bikes[bikes.length - 1], product);
 });
