@@ -1,4 +1,3 @@
-// import cart from './data/order.js';
 import bikes from './data/products.js';
 import { calcOrderTotal } from './register.js';
 import renderLineItem from './render-line-item.js';
