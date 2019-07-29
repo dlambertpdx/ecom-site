@@ -84,3 +84,21 @@ test('get product by code', (assert) => {
     // assert
     assert.deepEqual(bike, expect);
 });
+
+test('add a product', (assert) => {
+    // arrange 
+    const product = {
+        category: 'kids',
+        code: 'scooter1',
+        description: 'Kids Frozen Scooter',
+        image: '/assets/frozen.jpg',
+        name: 'Frozen Scooter',
+        price: 75
+    };
+    // act
+    store.addProduct(product);
+    const bikes = store.getProducts();
+
+    // assert
+    assert.deepEqual(bikes[bikes.length - 1], product);
+});
