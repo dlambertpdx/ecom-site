@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Lobster&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background-image: url('/assets/bike-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: firebrick;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:active {
+    color: firebrick;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: firebrick;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+        color: firebrick;
+        font-weight: bold;
+        text-decoration: underline;
+}
+
+#main-page {
+    text-align: center;
+}
+
+.main-button {
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+    color: #bc2e1e;
+    text-shadow:
+        0 1px 0px #378ab4,
+        1px 0 0px #5dabcd,
+        1px 2px 1px #378ab4,
+        2px 1px 1px #5dabcd;
+}
+
+.main-button a {
+    text-decoration: none;
+}
+
+.main-button a:visited {
+    text-decoration: none;
+}
+
+.main-button a:active {
+    text-decoration: none;
+}
+
+.main-button a:hover {
+    text-decoration: none;
+}

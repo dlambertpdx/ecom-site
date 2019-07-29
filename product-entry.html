@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="/src/product-entry.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./">Home</a>
+            <span> | </span>
+            <a href="/shopping-cart.html">View Cart</a>
+        </nav>
+        <h1>Add New Product:</h1>
+    </header>
+    <form id="product-form">
+        <p>
+            <label for="code">Item Code: </label>
+            <input type="text" id="code" name="code" required>
+        </p>
+        <p>
+            <label for="name">Item Name: </label>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="category">Item Category: </label>
+            <input type="text" id="category" name="category" required>
+        </p>
+        <p>
+            <label for="description">Item Description: </label>
+            <textarea name="description" id="description" required></textarea>
+        </p>
+        <p>
+            <label for="price">Item Price: </label>
+            <input type="number" id="price" name="price" required>
+        </p>
+        <p>
+            <label for="image">Item Image: </label>
+            <input type="file" id="image" name="image" required>
+        </p>
+        <button>Add Item</button>
+
+    </form>
+
+
+    <script src="/src/product-entry.js" type="module"></script>
+</body>
+
+</html>
