@@ -14,7 +14,7 @@ export function calcLineTotal(quantity, price) {
     return Number((quantity * price).toFixed(2));
 }
 
-export function calcOrderTotal(cart, bikes) {
+export function calcOrderTotal(cart) {
     // declare order total variable
     let orderTotal = 0;
     // loop the array of cart (line items)
